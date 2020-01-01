@@ -1,87 +1,160 @@
 <template>
-  <el-container style="height: 1000px; border: 1px solid #eee">
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-    <el-menu :default-openeds="['1', '3']">
-      <el-submenu index="1">
-        <template slot="title"><i class="el-icon-message"></i>导航一</template>
-        <el-menu-item-group>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-          <el-menu-item index="1-3">选项3</el-menu-item>
-          <el-menu-item index="1-4">选项4</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-submenu index="2">
-        <template slot="title"><i class="el-icon-menu"></i>导航二</template>
-        <el-menu-item-group>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-          <el-menu-item index="2-4">选项4</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title"><i class="el-icon-setting"></i>导航三</template>
-        <el-menu-item-group>
-          <el-menu-item index="3-1">选项1</el-menu-item>
-          <el-menu-item index="3-2">选项2</el-menu-item>
-          <el-menu-item index="3-3">选项3</el-menu-item>
-          <el-menu-item index="3-4">选项5</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-    </el-menu>
-  </el-aside>
+  <div>
+    <div class="header">
+      <div class="h_title">
+        <button class="log_button" @click="menuClick(0)">vsk</button>
+      </div>
+      <div class="h_menu">
+        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">v_shop</button>
+        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">v_swift</button>
+        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">v_kotlin</button>
+      </div>
+    </div>
+    <div class="h_line"></div>
 
-  <el-container>
-    <el-header style="text-align: right; font-size: 12px">
-      <el-dropdown>
-        <i class="el-icon-setting" style="margin-right: 15px"></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>查看</el-dropdown-item>
-          <el-dropdown-item>新增</el-dropdown-item>
-          <el-dropdown-item>删除</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-      <span>王小虎</span>
-    </el-header>
+    <div class="content">
+      <component :is="comName"></component>
+    </div>
 
-    <el-main>
-      <el-table :data="tableData">
-        <el-table-column prop="date" label="日期" width="140">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="120">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-      </el-table>
-    </el-main>
-  </el-container>
- </el-container>
+  </div>
+
+
 </template>
 
 <style>
-  .el-header {
-    background-color: #B3C0D1;
-    color: #333;
-    line-height: 60px;
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  button{
+    float: right;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0px solid transparent;
+    outline: none;
+    float: left;
+    font-size: x-large;
+
+  }
+  .log_button{
+
+    width: 100%;
+    height: 100%;
+    color: #00FFFF;
+    font-size: xx-large;
+
+  }
+  .log_button1{
+
+    width: 100px;
+    height: 100%;
+    align-content: center;
+    color: #00FFFF;
+
+
+  }
+  .log_button2{
+
+    width: 100px;
+    height: 100%;
+    align-content: center;
+    color: #00FFFF;
+
+
+  }
+  .log_button3{
+
+    width: 100px;
+    height: 100%;
+    align-content: center;
+    color: #00FFFF;
+
+
+  }
+  .liBackground {
+    color: darkcyan;
   }
 
-  .el-aside {
-    color: #333;
+  .h_line{
+
+    width: 1000px;
+    height: 6px;
+    background-color: #00FFFF;
+    margin: 0 auto;
   }
+
+  .header{
+    width: 1000px;
+    height: 100px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  .content{
+    width: 1000px;
+    background-color: white;
+    margin: 10px auto;
+  }
+  .h_title{
+
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    float: left;
+  }
+  .h_menu{
+
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    float: right;
+  }
+
 </style>
 
 <script>
-export default {
-  data () {
-    const item = {
-      date: '2016-05-02',
-      name: '王小虎',
-      address: '上海市普陀区金沙江路 1518 弄'
+  import Tools from '@/components/Tools'
+  import VSwift from '@/components/VSwift'
+  import VKotlin from '@/components/VKotlin'
+  import VShop from '@/components/VShop'
+
+
+  export default {
+    components: {Tools},
+    data () {
+     return {
+      comName: "Tools",
+       changeLeftBackground:0
+     }
+    },
+    components:{
+      VSwift,
+      VKotlin,
+      Tools,
+      VShop
+    },
+    methods:{
+
+      menuClick (n){
+
+        this.changeLeftBackground = n;
+        if (n == 0) {
+          this.comName = "Tools"
+
+        }else if (n == 1) {
+          this.comName = "VShop"
+
+        }else if (n == 2){
+
+          this.comName = "VSwift"
+
+        }else {
+          this.comName = "VKotlin"
+
+        }
+      }
+
     }
-    return {
-      tableData: Array(20).fill(item)
-    }
+
   }
-}
 </script>
