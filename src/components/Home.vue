@@ -2,12 +2,12 @@
   <div>
     <div class="header">
       <div class="h_title">
-        <button class="log_button" @click="menuClick(0)">vsk</button>
+        <button class="log_button" @click="menuClick(0)">VSK</button>
       </div>
       <div class="h_menu">
-        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">v_shop</button>
-        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">v_swift</button>
-        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">v_kotlin</button>
+        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">V_Shop</button>
+        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">V_Swift</button>
+        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">V_Kotlin</button>
       </div>
     </div>
     <div class="h_line"></div>
@@ -41,46 +41,46 @@
 
     width: 100%;
     height: 100%;
-    color: #00FFFF;
+    color: #9bcfb8;
     font-size: xx-large;
 
   }
   .log_button1{
 
-    width: 100px;
+    width: 130px;
     height: 100%;
     align-content: center;
-    color: #00FFFF;
+    color: #9bcfb8;
 
 
   }
   .log_button2{
 
-    width: 100px;
+    width: 130px;
     height: 100%;
     align-content: center;
-    color: #00FFFF;
+    color: #9bcfb8;
 
 
   }
   .log_button3{
 
-    width: 100px;
+    width: 130px;
     height: 100%;
     align-content: center;
-    color: #00FFFF;
+    color: #9bcfb8;
 
 
   }
   .liBackground {
-    color: darkcyan;
+    color: #689c97;
   }
 
   .h_line{
 
     width: 1000px;
-    height: 6px;
-    background-color: #00FFFF;
+    height: 1px;
+    background-color: #9bcfb8;
     margin: 0 auto;
   }
 

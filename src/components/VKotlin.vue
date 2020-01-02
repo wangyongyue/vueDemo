@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <div class="t_list">
       <VList :heros="heros" v-on:menuClick="menuClick"></VList>
@@ -23,14 +22,10 @@
     components: {VList, VContent},
     data() {
       return{
-        heros:['快速使用','v_if','v_model','v_array'],
+        heros:['v_text','v_attributedText','v_image','v_if','v_on','v_input','v_index','v_array'],
         categoryIndex: 0,
         models: [
-          { title: 'My journey with Vue',subTitle: "sdfsdf" },
-          { title: 'My journey with Vue',subTitle: "sdfsdf" },
-          { title: 'My journey with Vue',subTitle: "sdfsdf" },
-          { title: 'My journey with Vue',subTitle: "sdfsdf" },
-          { title: 'My journey with Vue',subTitle: "sdfsdf" },
+          { title: 'v_text',subTitle: "v_text" },
 
         ]
       }
@@ -41,24 +36,43 @@
         this.categoryIndex = n
         if (n == 0){
           this.models = [
-            { title: 'My journey \n with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
-
+            { title: 'v_text',subTitle: "v_text" },
           ]
 
         }else if (n == 1){
           this.models = [
-            { title: 'My journey \n with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
+            { title: 'v_attributedText',subTitle: "v_attributedText" },
 
           ]
         }else if (n == 2){
           this.models = [
-            { title: 'My journey \n with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
-            { title: 'My journey with Vue',subTitle: "sdfsdf" },
+            { title: 'v_image',subTitle: "v_image" },
+
+          ]
+        }else if (n == 3){
+          this.models = [
+            { title: 'v_if',subTitle: "v_if" },
+
+          ]
+        }else if (n == 4){
+          this.models = [
+            { title: 'v_on',subTitle: "v_on" },
+
+          ]
+        }else if (n == 5){
+          this.models = [
+            { title: 'v_input',subTitle: "v_input" },
+
+          ]
+        }else if (n == 6){
+          this.models = [
+            { title: 'v_index',subTitle: "v_index" },
+
+          ]
+        }else if (n == 7){
+          this.models = [
+            { title: 'v_array',subTitle: "v_array" },
+
           ]
         }
       }
@@ -66,5 +80,4 @@
     },
   }
 </script>
-
 
