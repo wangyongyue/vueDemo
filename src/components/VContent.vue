@@ -26,9 +26,16 @@
 <style scoped>
   .con_div{
     white-space: pre-wrap;
+    text-align: left;
+
   }
   .con_sub{
     color: red;
+    list-style-type:none;
+    white-space: pre-wrap;
+    text-align: left;
+
   }
+
 
 </style>

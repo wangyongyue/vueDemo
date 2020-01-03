@@ -72,7 +72,10 @@
   .t_content{
     background-color: white;
     height: 100%;
+    width: 800px;
     float: left;
+    align-items: flex-start;
   }
+
 
 </style>
