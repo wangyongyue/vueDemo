@@ -10,6 +10,7 @@
       ></VContent>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -18,7 +19,10 @@
 
   export default {
   name: 'Tools',
-    components: {VList, VContent},
+    components: {
+      VList,
+      VContent
+    },
     data() {
      return{
        heros:['简介','简单易用','动态组件','开发效率'],
@@ -29,6 +33,7 @@
      }
     },
     methods:{
+
       menuClick (n){
 
         this.categoryIndex = n

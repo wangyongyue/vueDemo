@@ -8,6 +8,8 @@
         <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">V_Shop</button>
         <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">V_Swift</button>
         <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">V_Kotlin</button>
+        <button :class="{ liBackground:changeLeftBackground == 4}" class="log_button3" @click="menuClick(4)">开发</button>
+
       </div>
     </div>
     <div class="h_line"></div>
@@ -117,6 +119,7 @@
   import VSwift from '@/components/VSwift'
   import VKotlin from '@/components/VKotlin'
   import VShop from '@/components/VShop'
+  import VCode from '@/components/VCode'
 
 
   export default {
@@ -131,7 +134,8 @@
       VSwift,
       VKotlin,
       Tools,
-      VShop
+      VShop,
+      VCode
     },
     methods:{
 
@@ -148,8 +152,11 @@
 
           this.comName = "VSwift"
 
-        }else {
+        }else if (n == 3){
           this.comName = "VKotlin"
+
+        }else {
+          this.comName = "VCode"
 
         }
       }
