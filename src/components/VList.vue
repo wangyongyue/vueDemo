@@ -36,7 +36,7 @@
     list-style-type:none;
   }
   .active {
-    color: #9bcfb8;
+    color: #1CB28A;
   }
 
 </style>

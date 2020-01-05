@@ -1,13 +1,47 @@
 <template>
   <div>
-    <div class="t_list">
-      <VList :heros="heros" v-on:menuClick="menuClick"></VList>
+    <div class="jianjie">
+      <H1>
+        <br>
+        VSK
+      </H1>
+      <p style="color: #1CB28A;font-family: Helvetica Neue;font-size:large">
+        <br>
+        <br>
+        专注于移动应用
+        <br>
+        <br>
+        组件式框架
+        <br>
+        <br>
+        自动化开发
+      </p>
     </div>
-    <div class="t_content">
-      <VContent
-      v-for="model in models"
-      :info="model"
-      ></VContent>
+    <div class="jianjieDetails">
+      <div class="jianjie1">
+        <p class="jtitle">简单易用</p>
+        <p>
+          <br>
+          接入简单，API易用
+        </p>
+      </div>
+      <div class="jianjie1">
+        <p class="jtitle">动态组件</p>
+        <p>
+          <br>
+          数据驱动，组件动态加载</p>
+      </div>
+      <div class="jianjie1">
+        <p class="jtitle">开发效率</p>
+        <p>
+          <br>
+          控制反转（IOC）,组件复用，开发效率增加至少35%</p>
+      </div>
+    </div>
+    <div class="zanzhu">
+      <div class="zanzhuline"></div>
+      <p>赞助合作</p>
+      <p></p>
     </div>
   </div>
 
@@ -67,6 +101,42 @@
 
 <style>
 
+  p{
+    list-style-type:none;
+  }
+  .jianjie{
+
+    height: 400px;
+    background-color: white;
+
+
+  }
+  .jianjieDetails{
+
+    height: 200px;
+    background-color: white;
+
+  }
+  .jianjie1{
+
+    width: 330px;
+    float: left;
+  }
+  .jtitle{
+
+    color: #1CB28A;
+  }
+  .zanzhu{
+
+    height: 200px;
+    background-color: white;
+  }
+  .zanzhuline{
+
+    height: 1px;
+    background-color: gainsboro;
+
+  }
   .t_list{
     background-color: white;
     width: 200px;

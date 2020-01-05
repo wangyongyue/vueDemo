@@ -1,17 +1,49 @@
 <template>
-
   <div>
-    <div class="t_list">
-      <VList :heros="heros" v-on:menuClick="menuClick"></VList>
+    <div class="shangye">
+      <p style="font-size: x-large;color: #1CB28A;">商业合作</p>
+      <p>
+        <br>
+        积极寻求合作，技术交流，和广告商。
+      </p>
     </div>
-    <div class="t_content">
-      <VContent
-        v-for="model in models"
-        :info="model"
-      ></VContent>
+    <div class="jianjieDetails">
+      <div class="lianxi">
+        <p style="color: #1CB28A;">合作内容</p>
+        <p style="text-align: center">
+          <br>
+          技术服务与支持
+          <br>
+          开 发 定 制 合 作
+
+        </p>
+      </div>
+      <div class="lianxi">
+        <p style="color: #1CB28A;">联系方式</p>
+        <p style="text-align: center">
+          <br>
+          电话：18601271036
+          <br>
+          QQ：2934939160
+        </p>
+      </div>
     </div>
+
   </div>
 </template>
+<style>
+  .shangye{
+
+    height: 200px;
+
+  }
+  .lianxi{
+
+    width: 500px;
+    height: 200px;
+    float: left;
+  }
+</style>
 
 <script>
   import VContent from '@/components/VContent'

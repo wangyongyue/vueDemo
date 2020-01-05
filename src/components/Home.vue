@@ -5,10 +5,10 @@
         <button class="log_button" @click="menuClick(0)">VSK</button>
       </div>
       <div class="h_menu">
-        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">V_Shop</button>
-        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">V_Swift</button>
-        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">V_Kotlin</button>
-        <button :class="{ liBackground:changeLeftBackground == 4}" class="log_button3" @click="menuClick(4)">开发</button>
+        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">组件式开发</button>
+        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">VSwift</button>
+        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">VKotlin</button>
+        <button :class="{ liBackground:changeLeftBackground == 4}" class="log_button3" @click="menuClick(4)">合作</button>
 
       </div>
     </div>
@@ -43,7 +43,7 @@
 
     width: 100%;
     height: 100%;
-    color: #9bcfb8;
+    color: #1CB28A;
     font-size: xx-large;
 
   }
@@ -52,7 +52,7 @@
     width: 130px;
     height: 100%;
     align-content: center;
-    color: #9bcfb8;
+    color: #1CB28A;
 
 
   }
@@ -61,7 +61,7 @@
     width: 130px;
     height: 100%;
     align-content: center;
-    color: #9bcfb8;
+    color: #1CB28A;
 
 
   }
@@ -70,7 +70,7 @@
     width: 130px;
     height: 100%;
     align-content: center;
-    color: #9bcfb8;
+    color: #1CB28A;
 
 
   }
@@ -146,7 +146,7 @@
           this.comName = "Tools"
 
         }else if (n == 1) {
-          this.comName = "VShop"
+          this.comName = "VCode"
 
         }else if (n == 2){
 
@@ -156,7 +156,7 @@
           this.comName = "VKotlin"
 
         }else {
-          this.comName = "VCode"
+          this.comName = "VShop"
 
         }
       }

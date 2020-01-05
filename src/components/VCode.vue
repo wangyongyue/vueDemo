@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="code_rong">
-      <component v-for="(item,index) in rongNames" :is="item"></component>
+    <div class="rong">
+      <div class="code_rong" v-for="(item,index) in rongNames">
+        <component class="code_component" :is="item"></component>
+        <button class="code_button" v-on:click="deleteCom(index)">删除</button>
+      </div>
     </div>
     <div class="code_com" v-for="(item,index) in comNames">
       <component class="code_component" :is="item"></component>
-      <button class="code_button" v-on:click="add(index)">add</button>
+      <button class="code_button" v-on:click="add(index)">添加</button>
     </div>
-
   </div>
 
 </template>
@@ -41,7 +43,6 @@
       return{
         comNames:["Content101","Content102","Content103","Content104","Content105","Content106","Content107","Content108"],
         rongNames:[],
-        buttons:["add","add","add","add"]
       }
     },
     methods: {
@@ -50,15 +51,25 @@
 
         this.rongNames.push(this.comNames[index])
 
+      },
+      deleteCom (index) {
+
+        this.rongNames.splice(index, 1);
+
+
       }
     }
   }
 </script>
 
 <style>
-  .code_rong{
-    width: 375px;
+  .rong{
+    width: 435px;
     height: 667px;
+    float: left;
+  }
+  .code_rong{
+    width: 435px;
     float: left;
   }
   .code_com{
