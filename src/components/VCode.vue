@@ -17,8 +17,10 @@
       <div style="width: 375px;height: 50px;background-color: white"><button v-on:click="creatCode" style="color: #1CB28A;font-size: xx-large"><br>完成</button></div>
       <p style="float: bottom;text-align: left;margin-left: 20px">点击完成可生成二维码,使用手机APP扫描查看生成效果</p>
       <a href="https://wwww.baidu.com" target="_blank" style="text-align: right">手机APP下载地址</a>
-      <div style="width: 500px;float: right;height: 100px"></div>
+      <div style="width: 500px;float: right;height: 10px"></div>
       <div id="qrcode" ref="qrcode"></div>
+      <div style="height: 60px;" ></div>
+
     </div>
   </div>
 
@@ -54,24 +56,34 @@
       return{
         comNames:["Content101","Content102","Content103","Content104","Content105","Content106"],
         rongNames:[],
+        conStrings:""
       }
     },
     methods: {
 
       creatCode (){
 
+        this.conStrings  = ""
+        for (let index in this.rongNames){
+
+            if (this.conStrings.length == 0){
+              this.conStrings = this.rongNames[index]
+            }else {
+              this.conStrings = this.conStrings + "," + this.rongNames[index]
+            }
+
+        }
+
+        document.getElementById("qrcode").innerHTML = "";
+
         let qrCode = new QRCode('qrcode', {
-          width: 255,//二维码宽度，单位像素
-          height: 255,//二维码高度，单位像素
-          text: 'http://www.baidu.com', //二维码中的内容
+          width: 100,//二维码宽度，单位像素
+          height: 100,//二维码高度，单位像素
+          text: this.conStrings, //二维码中的内容
           colorDark : '#000000',//前景色
           colorLight : '#ffffff',//背景色
           correctLevel : QRCode.CorrectLevel.H //容错级别，
         })
-
-        //设置二维码的内容
-        qrcode.makeCode("http://www.google.com");
-        qrcode.clear()//清除二维码。（仅在不支持 Canvas 的浏览器下有效）
 
       },
       add (index) {
