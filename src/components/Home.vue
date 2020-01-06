@@ -5,9 +5,9 @@
         <button class="log_button" @click="menuClick(0)">VSK</button>
       </div>
       <div class="h_menu">
-        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">组件式开发</button>
-        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">VSwift</button>
-        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">VKotlin</button>
+        <button :class="{ liBackground:changeLeftBackground == 1}" class="log_button1" @click="menuClick(1)">产品使用</button>
+        <button :class="{ liBackground:changeLeftBackground == 2}" class="log_button2" @click="menuClick(2)">VSwift API</button>
+        <button :class="{ liBackground:changeLeftBackground == 3}" class="log_button3" @click="menuClick(3)">VKotlin API</button>
         <button :class="{ liBackground:changeLeftBackground == 4}" class="log_button3" @click="menuClick(4)">合作</button>
 
       </div>

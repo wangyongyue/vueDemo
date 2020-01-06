@@ -6,15 +6,26 @@
         <button class="code_button" v-on:click="deleteCom(index)">删除</button>
       </div>
     </div>
-    <div class="code_com" v-for="(item,index) in comNames">
-      <component class="code_component" :is="item"></component>
-      <button class="code_button" v-on:click="add(index)">添加</button>
+    <div class="com">
+      <div class="code_com" v-for="(item,index) in comNames">
+        <component class="code_component" :is="item"></component>
+        <button class="code_button" v-on:click="add(index)">添加</button>
+      </div>
+    </div>
+
+    <div style="width: 500px;float: right;">
+      <div style="width: 375px;height: 50px;background-color: white"><button v-on:click="creatCode" style="color: #1CB28A;font-size: xx-large"><br>完成</button></div>
+      <p style="float: bottom;text-align: left;margin-left: 20px">点击完成可生成二维码,使用手机APP扫描查看生成效果</p>
+      <a href="https://wwww.baidu.com" target="_blank" style="text-align: right">手机APP下载地址</a>
+      <div style="width: 500px;float: right;height: 100px"></div>
+      <div id="qrcode" ref="qrcode"></div>
     </div>
   </div>
 
 </template>
 
 <script>
+  import QRCode from 'qrcodejs2'
   import VTest from '@/components/VTest'
   import Content101 from '@/Contents/Content101'
   import Content102 from '@/Contents/Content102'
@@ -41,12 +52,28 @@
     },
     data() {
       return{
-        comNames:["Content101","Content102","Content103","Content104","Content105","Content106","Content107","Content108"],
+        comNames:["Content101","Content102","Content103","Content104","Content105","Content106"],
         rongNames:[],
       }
     },
     methods: {
 
+      creatCode (){
+
+        let qrCode = new QRCode('qrcode', {
+          width: 255,//二维码宽度，单位像素
+          height: 255,//二维码高度，单位像素
+          text: 'http://www.baidu.com', //二维码中的内容
+          colorDark : '#000000',//前景色
+          colorLight : '#ffffff',//背景色
+          correctLevel : QRCode.CorrectLevel.H //容错级别，
+        })
+
+        //设置二维码的内容
+        qrcode.makeCode("http://www.google.com");
+        qrcode.clear()//清除二维码。（仅在不支持 Canvas 的浏览器下有效）
+
+      },
       add (index) {
 
         this.rongNames.push(this.comNames[index])
@@ -64,12 +91,17 @@
 
 <style>
   .rong{
-    width: 435px;
+    width: 500px;
     height: 667px;
     float: left;
   }
   .code_rong{
     width: 435px;
+    float: left;
+  }
+  .com{
+    width: 500px;
+    height: 667px;
     float: left;
   }
   .code_com{

@@ -1,21 +1,19 @@
 <template>
   <div>
     <div class="jianjie">
-      <H1>
+      <H1 style="font-size: xx-large">
         <br>
         VSK
       </H1>
-      <p style="color: #1CB28A;font-family: Helvetica Neue;font-size:large">
+      <p style="color: #1CB28A;font-family: Helvetica Neue;font-size:x-large">
+        <br>
+        专注于移动应用    组件式框架    自动化开发
         <br>
         <br>
-        专注于移动应用
-        <br>
-        <br>
-        组件式框架
-        <br>
-        <br>
-        自动化开发
       </p>
+      <p>针对产品，设计人员快速生成高保真Demo开发人员</p>
+      <p>针对移动开发人员提供完善API服务，专注于业务流程，完美解耦，高度复用</p>
+
     </div>
     <div class="jianjieDetails">
       <div class="jianjie1">
