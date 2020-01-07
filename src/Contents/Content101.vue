@@ -1,9 +1,9 @@
 <template>
   <div>
     <div style="width: 60px;height: 60px;float: left;background-color: red">
-      <img src="../assets/911.jpg" width="60px" height="60px">
+      <img src="../assets/che1.jpg" width="60px" height="60px">
     </div>
-    <div style="height: 60px;margin-left: 10px;background-color: yellow">
+    <div style="height: 60px;margin-left: 10px;background-color: white">
       <p style="text-align: left">Content101</p>
       <p style="text-align: left">Content101</p>
 

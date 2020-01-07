@@ -95,7 +95,6 @@
 
         this.rongNames.splice(index, 1);
 
-
       }
     }
   }
