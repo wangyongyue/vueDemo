@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="width: 100%;height: 100px;background-color: red">
+    <div style="width: 100%;height: 100px;background-color: gainsboro">
       <img src="../assets/che5.jpg" width="100%" height="100px">
 
     </div>

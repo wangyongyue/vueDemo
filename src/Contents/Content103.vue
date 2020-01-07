@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="text-align: left">标题</div>
-    <div style="width: 60px;height: 60px;float: left;background-color: red">
+    <div style="width: 60px;height: 60px;float: left;background-color: gainsboro">
       <img src="../assets/che3.jpg" width="60px" height="60px">
 
     </div>
