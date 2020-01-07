@@ -112,7 +112,7 @@
   }
   .com{
     width: 500px;
-    height: 667px;
+    height: 750px;
     float: left;
   }
   .code_com{
