@@ -16,7 +16,7 @@
     <div style="width: 500px;float: right;">
       <div style="width: 375px;height: 50px;background-color: white"><button v-on:click="creatCode" style="color: #1CB28A;font-size: xx-large"><br>完成</button></div>
       <p style="float: bottom;text-align: left;margin-left: 20px">点击完成可生成二维码,使用手机APP扫描查看生成效果</p>
-      <a href="https://wwww.baidu.com" target="_blank" style="text-align: right">手机APP下载地址</a>
+      <a href="https://testflight.apple.com/join/KDQROpFU" target="_blank" style="text-align: right">手机APP下载地址复制链接Safari</a>
       <div style="width: 500px;float: right;height: 10px"></div>
       <div id="qrcode" ref="qrcode"></div>
       <div style="height: 60px;" ></div>

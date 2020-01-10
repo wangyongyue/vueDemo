@@ -1,8 +1,11 @@
 <template>
   <div>
-    <ul class="l_ul">
-      <li :class="{active:categoryIndex==index}" v-for="(item,index) in heros" @click="handleClick(index)">{{item}}</li>
-    </ul>
+
+    <div  v-for="(item,index) in heros" >
+      <button style="list-style-type:none;float: left;width: 100%;padding-top: 20px;font-size: large;text-align: left" :class="{active:categoryIndex==index}" @click="handleClick(index)">{{item.title}}</button>
+      <p :class="{active:categoryIndex==index} " style="text-align: left">{{item.subTitle}}</p>
+    </div>
+
   </div>
 
 </template>
@@ -12,13 +15,14 @@
     name: 'VList',
     data (){
       return{
-        heros:['雷恩加尔','安妮','沃里克','德莱厄斯'],
+        heros:[{title:"abc",subTitle:"abc"}],
         categoryIndex: 0,
 
       }
     },
     props:{
       heros:Array
+
     },
 
     methods: {
@@ -34,6 +38,11 @@
 <style scoped>
   .l_ul{
     list-style-type:none;
+  }
+  li{
+    list-style-type:none;
+    color: #304455;
+
   }
   .active {
     color: #1CB28A;

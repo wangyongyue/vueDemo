@@ -1,6 +1,9 @@
 <template>
   <div>
     <p class="con_div">{{ info.title }}</p>
+    <p class="con_yan">
+      <br>
+    </p>
     <p class="con_sub">{{ info.subTitle }}</p>
   </div>
 
@@ -27,15 +30,29 @@
   .con_div{
     white-space: pre-wrap;
     text-align: left;
+    color: #304455;
+
 
   }
+  .con_yan{
+
+    white-space: pre-wrap;
+    text-align: left;
+    color: #304455;
+  }
+
   .con_sub{
-    color: red;
+    color: #304455;
     list-style-type:none;
     white-space: pre-wrap;
     text-align: left;
+    background-color: #f8f8f8;
+    font-family: "Roboto Mono", Monaco, courier, monospace;
+    margin: 0 2px;
+    border-radius: 2px;
 
   }
+
 
 
 </style>

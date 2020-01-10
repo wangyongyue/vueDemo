@@ -25,33 +25,20 @@
     components: {VList, VContent},
     data() {
       return{
-        heros:['v_text','v_attributedText','v_image','v_if','v_on','v_input','v_index,v_array'],
+        heros:[
+          {title:'简介',subTitle:''},
+          {title:'v_text',subTitle:'文字内容'},
+          {title:'v_attributedText',subTitle:'富文本内容'},
+          {title:'v_image',subTitle:'图片内容的指定'},
+          {title:'v_on',subTitle:'对象事件的传递'},
+          {title:'v_input',subTitle:'输入绑定'},
+          {title:'v_index,v_array',subTitle:'列表数组的现实的点击事件'},
+
+        ],
         categoryIndex: 0,
         models: [
-          { title: 'v_text',subTitle: "override func viewDidLoad() {\n" +
-              "        super.viewDidLoad()\n" +
-              "        self.view.backgroundColor = UIColor.white\n" +
-              "        \n" +
-              "        let v = Vue()\n" +
-              "        aview(v)\n" +
-              "        adata(v)\n" +
-              "       \n" +
-              "    }\n" +
-              "    func adata(_ v:Vue){\n" +
-              "        \n" +
-              "        v.v_text(vId: \"abc\") { () -> String? in\n" +
-              "                   \n" +
-              "            return \"label\"\n" +
-              "        }\n" +
-              "    }\n" +
-              "    func aview(_ v:Vue){\n" +
-              "        \n" +
-              "        let label = UILabel()\n" +
-              "        self.view.addSubview(label)\n" +
-              "        label.frame = CGRect.init(x: 100, y: 100, width: 100, height: 100)\n" +
-              "        \n" +
-              "        label.v_text(vId: \"abc\", vue: v)        \n" +
-              "    }" },
+          { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的零侵入框架。',subTitle: "简单易用，view完美的解耦" },
+          { title: '安装方式简单',subTitle: "使用pod 'VueSwift'" },
 
         ]
       }
@@ -60,7 +47,14 @@
       menuClick (n){
 
         this.categoryIndex = n
-        if (n == 0){
+
+        if (n == 0) {
+
+          this.models = [
+            { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的零侵入框架。',subTitle: "简单易用，view完美的解耦" },
+            { title: '安装方式简单',subTitle: "使用pod 'VueSwift'" },
+          ]
+        }else if (n == 1){
           this.models = [
             { title: 'v_text',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -88,7 +82,7 @@
                 "    }" },
           ]
 
-        }else if (n == 1){
+        }else if (n == 2){
           this.models = [
             { title: 'v_attributedText',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -120,7 +114,7 @@
                 "    }" },
 
           ]
-        }else if (n == 2){
+        }else if (n == 3){
           this.models = [
             { title: 'v_image',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -151,7 +145,7 @@
                 "    }" },
 
           ]
-        }else if (n == 3){
+        }else if (n == 4){
           this.models = [
             { title: 'v_if',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -182,7 +176,7 @@
                 "    }" },
 
           ]
-        }else if (n == 4){
+        }else if (n == 5){
           this.models = [
             { title: 'v_on',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -214,7 +208,7 @@
                 "    }" },
 
           ]
-        }else if (n == 5){
+        }else if (n == 6){
           this.models = [
             { title: 'v_input',subTitle: "override func viewDidLoad() {\n" +
                 "        super.viewDidLoad()\n" +
@@ -249,7 +243,7 @@
                 "    }" },
 
           ]
-        }else if (n == 6){
+        }else if (n == 7){
           this.models = [
             { title: 'v_index,v_array',subTitle: "import UIKit\n" +
                 "import VueSwift\n" +
