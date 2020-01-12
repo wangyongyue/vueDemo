@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div style="height: 30px;background-color: white">
+    <div style="height: 20px;background-color: white">
       <p style="text-align: left">数据数据数据数据</p>
     </div>
-    <div style="height: 30px;background-color: white">
+    <div style="height: 20px;background-color: white">
       <p style="text-align: left">数据数据数据数据</p>
     </div>
-    <div style="height: 30px;background-color: white">
+    <div style="height: 20px;background-color: white">
       <p style="text-align: left">数据数据数据数据</p>
     </div>
     <div style="width: 100%;height: 10px;background-color: white"></div>

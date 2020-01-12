@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div style="width: 60px;height: 60px;float: left;background-color: gainsboro">
-      <img src="../assets/che1.jpg" width="60px" height="60px">
+    <div style="width: 40px;height: 40px;float: left;background-color: gainsboro">
+      <img src="../assets/che1.jpg" width="40px" height="40px">
     </div>
-    <div style="height: 60px;margin-left: 10px;background-color: white">
+    <div style="height: 40px;margin-left: 10px;background-color: white">
       <p style="text-align: left">数据数据数据数据</p>
       <p style="text-align: left">数据数据数据数据</p>
 

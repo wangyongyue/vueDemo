@@ -2,9 +2,9 @@
   <div>
 
     <div  v-for="(item,index) in heros" >
-      <button style="list-style-type:none;float: left;width: 100%;padding-top: 20px;font-size: large;text-align: left" :class="{active:categoryIndex==index}" @click="handleClick(index)">{{item.title}}</button>
-      <p :class="{active:categoryIndex==index} " style="text-align: left">{{item.subTitle}}</p>
-    </div>
+    <button style="list-style-type:none;float: left;width: 100%;padding-top: 20px;font-size: large;text-align: left" :class="{active:categoryIndex==index}" @click="handleClick(index)">{{item.title}}</button>
+    <p :class="{active:categoryIndex==index} " style="text-align: left">{{item.subTitle}}</p>
+  </div>
 
   </div>
 
