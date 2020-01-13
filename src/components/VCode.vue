@@ -118,7 +118,7 @@
 
         }
 
-        alert(JSON.stringify(confData))
+        // alert(JSON.stringify(confData))
 
         this.conStrings = JSON.stringify(confData)
 
