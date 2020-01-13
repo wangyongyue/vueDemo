@@ -1,8 +1,8 @@
 <template>
   <div>
     <div style="height: 40px;background-color: white;float: left;">
-      <p style="text-align: left">数据数据数据数据</p>
-      <p style="text-align: left">数据数据数据数据</p>
+      <p style="text-align: left">{{info.title}}</p>
+      <p style="text-align: left">{{info.source}}</p>
 
     </div>
     <div style="width: 40px;height: 40px;float: right;background-color: gainsboro">
@@ -18,7 +18,14 @@
 
 <script>
   export default {
-    name: 'Content102'
+    name: 'Content102',
+    props:{
+      info:{
+        title:String,
+        source:String
+      }
+    }
+
   }
 </script>
 

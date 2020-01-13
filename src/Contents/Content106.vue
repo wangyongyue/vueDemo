@@ -1,10 +1,10 @@
 <template>
   <div>
     <div style="height: 20px;background-color: white">
-      <p style="text-align: left">数据数据数据数据</p>
+      <p style="text-align: left">{{info.title}}</p>
     </div>
     <div style="height: 20px;background-color: white">
-      <p style="text-align: left">数据数据数据数据</p>
+      <p style="text-align: left">{{info.source}}</p>
     </div>
     <div>
       <div style="width: 76px;height: 76px;float: left;background-color: gainsboro">
@@ -29,7 +29,13 @@
 
 <script>
   export default {
-    name: 'Content106'
+    name: 'Content106',
+    props:{
+      info:{
+        title:String,
+        source:String
+      }
+    }
   }
 </script>
 

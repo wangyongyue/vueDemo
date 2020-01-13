@@ -7,7 +7,7 @@
       <br>
 
       <div class="code_com" v-for="(item,index) in comNames">
-        <component class="code_component" :is="item"></component>
+        <component class="code_component" :is="item" :info="infos[index]"></component>
         <button class="code_button" v-on:click="add(index)">add</button>
       </div>
     </div>
@@ -16,7 +16,7 @@
       <div style="width: 100%;height: 1px;background-color: gainsboro;float: left;margin-left: 2px"></div>
       <br>
       <div class="code_rong" v-for="(item,index) in rongNames">
-        <component class="code_component" :is="item"></component>
+        <component class="code_component" :is="item" :info="infoModels[index]"></component>
         <button class="code_button_dele" v-on:click="deleteCom(index)">delete</button>
       </div>
     </div>
@@ -28,9 +28,7 @@
 
         <div style="background-color: white;width: 400px;height: 100%;background-color: #f8f8f8">
           <p style="text-align: left;font-size: larger">[</p>
-          <Vkeys v-for="item in keyValues" :keys="item.keys"
-          ></Vkeys>
-
+          <Vkeys v-for="item in infoModels" :item="item"></Vkeys>
           <p style="text-align: left;font-size: larger">]</p>
 
         </div>
@@ -85,19 +83,21 @@
         comNames:["Content101","Content102","Content103","Content104","Content105","Content106"],
         rongNames:[],
         conStrings:"",
-        componentData:[],
-        keyValues:[
-
+        infos:[
+          {title:"数据数据",source:"数据数据"},
+          {title:"数据数据",source:"数据数据"},
+          {title:"数据数据",source:"数据数据"},
+          {title:"数据数据",source:"数据数据",subTitle:"数据数据"},
+          {title:"数据数据",source:"数据数据"},
+          {title:"数据数据",source:"数据数据"},
         ],
-        keys:[
-          {key:"name",value:"vlaue"}
-        ],
-        componentModel:{
+        infoModels:[]
 
-        }
       }
     },
+
     methods: {
+
 
       creatCode (){
 
@@ -112,27 +112,13 @@
 
         }
 
-
-        this.componentData = []
-        for (let index in this.keyValues){
-
-            let dic = {}
-            let keys = this.keyValues[index]["keys"]
-            for (let number in keys){
-                dic[keys[number]['key']] = keys[number]['value']
-                dic["s"] = "sdf"
-            }
-
-          this.componentData.push(dic)
-        }
-
         let confData = {
-          "data":this.componentData,
+          "data":this.infoModels,
           "dataModel":this.rongNames,
 
         }
 
-        // alert(JSON.stringify(confData))
+        alert(JSON.stringify(confData))
 
         this.conStrings = JSON.stringify(confData)
 
@@ -152,83 +138,29 @@
       add (index) {
 
         this.rongNames.push(this.comNames[index])
+        this.infoModels.push(componentModel()[index])
 
-        this.keyValues = []
-        this.componentModel.copy
-        for (let value in this.rongNames){
-          let m = componentModel()
-          let vks = m[this.rongNames[value]]
-          this.keyValues.push(vks)
-
-        }
 
       },
       deleteCom (index) {
 
         this.rongNames.splice(index, 1);
-        this.keyValues = []
-        for (let value in this.rongNames){
-          let m = componentModel()
-          let vks = m[this.rongNames[value]]
-          this.keyValues.push(vks)
+        this.infoModels.splice(index,1)
 
-        }
 
       }
     }
   }
   function componentModel () {
 
-    let model ={
 
-      "Content101":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-
-        ]
-      },
-      "Content102":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-
-        ]
-      },
-      "Content103":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-
-
-        ]
-      },
-      "Content104":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-          {key:"subTitle",value:"数据数据数据"},
-
-        ]
-      },
-      "Content105":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-
-        ]
-      },
-      "Content106":{
-        keys:[
-          {key:"title",value:"数据数据数据"},
-          {key:"source",value:"数据数据数据"},
-
-        ]
-      },
-
-
-
-    }
+    let model = [
+      {title:"数据数据",source:"数据数据"},
+      {title:"数据数据",source:"数据数据"},
+      {title:"数据数据",source:"数据数据"},
+      {title:"数据数据",source:"数据数据",subTitle:"数据数据"},
+      {title:"数据数据",source:"数据数据"},
+      {title:"数据数据",source:"数据数据"},]
     return model
 
   }
