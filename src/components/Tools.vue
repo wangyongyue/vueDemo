@@ -45,8 +45,19 @@
     </div>
     <div class="zanzhu">
       <div class="zanzhuline"></div>
-      <p>赞助合作</p>
-      <p></p>
+      <br>
+      <p style="font-size: large">赞助合作</p>
+      <div style="width: 500px;height: 60px;float: left">
+        <p style="font-size: large">赞助二维码</p>
+        <img src="../assets/zhifu.jpeg" width="209px" height="284px">
+      </div>
+
+      <div style="width: 500px;height: 60px;float: left">
+        <p style="font-size: large">合作单位</p>
+        <p>期待您的加入</p>
+      </div>
+
+
     </div>
   </div>
 

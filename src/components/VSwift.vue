@@ -37,7 +37,7 @@
         ],
         categoryIndex: 0,
         models: [
-          { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的零侵入框架。',subTitle: "简单易用，view完美的解耦" },
+          { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的无侵入框架。',subTitle: "简单易用，完美解耦" },
           { title: '安装方式简单',subTitle: "使用pod 'VueSwift'" },
 
         ]
@@ -51,7 +51,7 @@
         if (n == 0) {
 
           this.models = [
-            { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的零侵入框架。',subTitle: "简单易用，view完美的解耦" },
+            { title: 'VSwift 原名（VueSwift）iOS框架，组件化，数据驱动，动态加载的无侵入框架。',subTitle: "简单易用，完美解耦" },
             { title: '安装方式简单',subTitle: "使用pod 'VueSwift'" },
           ]
         }else if (n == 1){
