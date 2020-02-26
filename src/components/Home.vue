@@ -120,6 +120,9 @@
   import VKotlin from '@/components/VKotlin'
   import VShop from '@/components/VShop'
   import VCode from '@/components/VCode'
+  import VPage from '@/components/VPage'
+  import VModule from '@/components/VModule'
+  import VTest from '@/components/VTest'
 
 
   export default {
@@ -135,7 +138,11 @@
       VKotlin,
       Tools,
       VShop,
-      VCode
+      VCode,
+      VPage,
+      VModule,
+      VTest
+
     },
     methods:{
 
@@ -146,7 +153,8 @@
           this.comName = "Tools"
 
         }else if (n == 1) {
-          this.comName = "VCode"
+          this.comName = "VTest"
+
 
         }else if (n == 2){
 

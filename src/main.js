@@ -6,6 +6,14 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Print from 'vue-print-nb'
+import axios from 'axios'
+import VueCookies from 'vue-cookies'
+
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = '/api'
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+Vue.use(VueCookies)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 Vue.use(Print)

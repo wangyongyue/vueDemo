@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div >
+    <!--<div style="width: 100%;float: left;height: 20px">-->
+      <!--<button style="float: right;font-size: 14px"  v-on:click="todo()">dsd</button>-->
+    <!--</div>-->
     <div style="width: 40px;height: 40px;float: left;background-color: gainsboro">
       <img src="../assets/che1.jpg" width="40px" height="40px">
     </div>
@@ -23,6 +26,11 @@
       info:{
         title:String,
         source:String
+      }
+    },
+    methods:{
+      todo (){
+        this.$emit('todo')
       }
     }
   }
