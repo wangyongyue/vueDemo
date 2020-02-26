@@ -15,7 +15,9 @@
 
       <a href="https://testflight.apple.com/join/KDQROpFU" target="_blank" style="text-align: center;margin-left: 30px">示例程序请使用测试程序 TaskFlow,点击链接复制到Safari</a>
 
-      <button @click="onEnglish">英语题后台管理</button>
+      <br>
+      <br>
+      <button style="font-size: 13px;float: right" @click="onEnglish">英语题后台管理</button>
     </div>
     <div style="width: 500px;height: 600px;float:left">
       <br>

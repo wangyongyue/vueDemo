@@ -190,6 +190,10 @@
       login: function () {
 
 
+        if (this.loginItem.userName != "ww"){
+          alert('用户名不对')
+          return
+        }
         var params = new URLSearchParams()
         params.append('name', this.loginItem.userName)
         params.append('password', this.loginItem.password)
