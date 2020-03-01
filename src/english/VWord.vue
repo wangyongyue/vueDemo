@@ -9,12 +9,12 @@
 
 
     </div>
-    <div style="border-style:solid;border-color:#1CB28A;border-width: 1px;border-radius: 15px; width: 200px;height: 700px;float: left;margin-top: 50px">
+    <div style="border-style:solid;border-color:#1CB28A;border-width: 1px;border-radius: 15px; width: 400px;height: 700px;float: left;margin-top: 50px">
 
       <VTitle  v-for="(item,index) in infos" :title="item.title" v-on:clickTodo="clickTodo(index)" v-on:clickDele="clickDele(index)"></VTitle>
 
     </div>
-    <div style="float: left;border-style:solid;border-color:#1CB28A;border-width: 1px;border-radius: 15px; width: 600px;height: 700px;float: left;margin-top: 50px;margin-left: 50px">
+    <div style="float: left;border-style:solid;border-color:#1CB28A;border-width: 1px;border-radius: 15px; width: 500px;height: 700px;float: left;margin-top: 50px;margin-left: 50px">
 
       <div style="margin: 20px 20px 20px 20px">
 
